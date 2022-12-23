@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BlueOceanDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PoslaniPodatki">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="auth_usr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="remote_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="game_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="game_session_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="currencycode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="round_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="final" Type="Boolean" />
+    <Property Name="is_bonus_win" Type="Boolean" />
+    <Property Name="is_freeround_bet" Type="Boolean" />
+    <Property Name="is_freeround_win" Type="Boolean" />
+    <Property Name="is_jackpot_win" Type="Boolean" />
+    <Property Name="is_rollback" Type="Boolean" />
+    <Property Name="balance" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="nickname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="platform_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="agent_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="agent_prefix" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="group" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DatumZapisa" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="BlueOceanDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PoslaniPodatki" EntityType="Self.PoslaniPodatki" />
+  </EntityContainer>
+</Schema>

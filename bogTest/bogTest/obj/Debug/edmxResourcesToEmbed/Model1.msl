@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BlueOceanDBModelStoreContainer" CdmEntityContainer="BlueOceanDBEntities">
+    <EntitySetMapping Name="PoslaniPodatki">
+      <EntityTypeMapping TypeName="BlueOceanDBModel.PoslaniPodatki">
+        <MappingFragment StoreEntitySet="PoslaniPodatki">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="auth_usr" ColumnName="auth_usr" />
+          <ScalarProperty Name="remote_id" ColumnName="remote_id" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="game_id" ColumnName="game_id" />
+          <ScalarProperty Name="game_session_id" ColumnName="game_session_id" />
+          <ScalarProperty Name="currencycode" ColumnName="currencycode" />
+          <ScalarProperty Name="round_id" ColumnName="round_id" />
+          <ScalarProperty Name="final" ColumnName="final" />
+          <ScalarProperty Name="is_bonus_win" ColumnName="is_bonus_win" />
+          <ScalarProperty Name="is_freeround_bet" ColumnName="is_freeround_bet" />
+          <ScalarProperty Name="is_freeround_win" ColumnName="is_freeround_win" />
+          <ScalarProperty Name="is_jackpot_win" ColumnName="is_jackpot_win" />
+          <ScalarProperty Name="is_rollback" ColumnName="is_rollback" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="nickname" ColumnName="nickname" />
+          <ScalarProperty Name="platform_id" ColumnName="platform_id" />
+          <ScalarProperty Name="agent_id" ColumnName="agent_id" />
+          <ScalarProperty Name="agent_prefix" ColumnName="agent_prefix" />
+          <ScalarProperty Name="group" ColumnName="group" />
+          <ScalarProperty Name="DatumZapisa" ColumnName="DatumZapisa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

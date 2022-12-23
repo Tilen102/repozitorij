@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BlueOceanDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PoslaniPodatki">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="auth_usr" Type="nvarchar" MaxLength="50" />
+          <Property Name="remote_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="amount" Type="money" />
+          <Property Name="game_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="game_session_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="currencycode" Type="nvarchar" MaxLength="50" />
+          <Property Name="round_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="final" Type="bit" />
+          <Property Name="is_bonus_win" Type="bit" />
+          <Property Name="is_freeround_bet" Type="bit" />
+          <Property Name="is_freeround_win" Type="bit" />
+          <Property Name="is_jackpot_win" Type="bit" />
+          <Property Name="is_rollback" Type="bit" />
+          <Property Name="balance" Type="money" />
+          <Property Name="nickname" Type="nvarchar" MaxLength="50" />
+          <Property Name="platform_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="agent_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="agent_prefix" Type="nvarchar" MaxLength="50" />
+          <Property Name="group" Type="nvarchar" MaxLength="50" />
+          <Property Name="DatumZapisa" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="BlueOceanDBModelStoreContainer">
+          <EntitySet Name="PoslaniPodatki" EntityType="Self.PoslaniPodatki" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BlueOceanDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PoslaniPodatki">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="auth_usr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="remote_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="game_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="game_session_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="currencycode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="round_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="final" Type="Boolean" />
+          <Property Name="is_bonus_win" Type="Boolean" />
+          <Property Name="is_freeround_bet" Type="Boolean" />
+          <Property Name="is_freeround_win" Type="Boolean" />
+          <Property Name="is_jackpot_win" Type="Boolean" />
+          <Property Name="is_rollback" Type="Boolean" />
+          <Property Name="balance" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="nickname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="platform_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="agent_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="agent_prefix" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="group" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DatumZapisa" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="BlueOceanDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PoslaniPodatki" EntityType="Self.PoslaniPodatki" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BlueOceanDBModelStoreContainer" CdmEntityContainer="BlueOceanDBEntities">
+          <EntitySetMapping Name="PoslaniPodatki">
+            <EntityTypeMapping TypeName="BlueOceanDBModel.PoslaniPodatki">
+              <MappingFragment StoreEntitySet="PoslaniPodatki">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="auth_usr" ColumnName="auth_usr" />
+                <ScalarProperty Name="remote_id" ColumnName="remote_id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="game_id" ColumnName="game_id" />
+                <ScalarProperty Name="game_session_id" ColumnName="game_session_id" />
+                <ScalarProperty Name="currencycode" ColumnName="currencycode" />
+                <ScalarProperty Name="round_id" ColumnName="round_id" />
+                <ScalarProperty Name="final" ColumnName="final" />
+                <ScalarProperty Name="is_bonus_win" ColumnName="is_bonus_win" />
+                <ScalarProperty Name="is_freeround_bet" ColumnName="is_freeround_bet" />
+                <ScalarProperty Name="is_freeround_win" ColumnName="is_freeround_win" />
+                <ScalarProperty Name="is_jackpot_win" ColumnName="is_jackpot_win" />
+                <ScalarProperty Name="is_rollback" ColumnName="is_rollback" />
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="nickname" ColumnName="nickname" />
+                <ScalarProperty Name="platform_id" ColumnName="platform_id" />
+                <ScalarProperty Name="agent_id" ColumnName="agent_id" />
+                <ScalarProperty Name="agent_prefix" ColumnName="agent_prefix" />
+                <ScalarProperty Name="group" ColumnName="group" />
+                <ScalarProperty Name="DatumZapisa" ColumnName="DatumZapisa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
